@@ -12,3 +12,12 @@ export interface IProjects{
   github: string;
   image: string;
 }
+
+export interface IAbout{
+  _id: string;
+  image: string;
+  text: {
+    _key: string;
+    paragraph: string
+  }[]
+}

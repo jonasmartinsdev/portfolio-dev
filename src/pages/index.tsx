@@ -6,16 +6,17 @@ import { Projects } from '../components/Projects';
 import { Skills } from '../components/Skills';
 import { client } from '../lib/sanity';
 import { GetStaticProps } from 'next';
-import { IHome, IProjects } from '../@types/IPortfolio';
+import { IAbout, IHome, IProjects } from '../@types/IPortfolio';
 
 
 interface HomeProps {
   home: IHome,
-  projects: IProjects[]
+  projects: IProjects[],
+  about: IAbout
 }
 
 
-export default function Home({ home, projects }:HomeProps ) {
+export default function Home({ home, projects, about }:HomeProps ) {
 
   return (
     <>
@@ -23,7 +24,7 @@ export default function Home({ home, projects }:HomeProps ) {
       <Hero home={home} />
       <div className='w-full h-32 bg-[#181824]' />
       <main className='max-w-6xl w-full mx-auto px-4 overflow-hidden '>
-        <About />
+        <About  about={about}/>
         <Skills />
         <Projects projects={projects} />
         <Footer />  
@@ -36,11 +37,15 @@ export default function Home({ home, projects }:HomeProps ) {
 export const getStaticProps: GetStaticProps = async () => {
   const home = await client.fetch('*[_type == "home"][0]');
   const projects = await client.fetch('*[_type == "projects"]');
+  const about = await client.fetch('*[_type == "about"][0]');
+
+  console.log(about);
 
   return {
     props: {
       home,
-      projects
+      projects,
+      about
     }
   };
 };
