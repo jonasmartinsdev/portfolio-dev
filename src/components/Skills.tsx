@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SiCss3, SiDocker, SiExpress, SiFramer, SiHtml5, SiJavascript, SiJest, SiNextdotjs, SiNodedotjs, SiPrisma, SiReact, SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiCss3, SiDocker, SiExpress, SiFramer, SiGit, SiHtml5, SiJavascript, SiJest, SiNextdotjs, SiNodedotjs, SiPrisma, SiReact, SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 import { Title } from './Title';
 
@@ -30,6 +30,7 @@ export function Skills() {
         <SiJest size={100}/>
         <SiFramer size={100}/>
         <SiPrisma size={100}/>
+        <SiGit size={100}/>
         
       </motion.div>
        
