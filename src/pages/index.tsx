@@ -37,8 +37,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const home = await client.fetch('*[_type == "home"][0]');
   const projects = await client.fetch('*[_type == "projects"]');
 
-  console.log(projects);
-
   return {
     props: {
       home,
