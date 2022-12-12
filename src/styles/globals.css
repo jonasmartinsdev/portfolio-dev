@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+  ::-webkit-scrollbar-track {
+    background: @apply bg-portfolio-secondary
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: @apply bg-portfolio-secondary
+  }
+
