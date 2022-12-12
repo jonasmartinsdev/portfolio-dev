@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 
 import { FiGithub, FiEye} from 'react-icons/fi';
+import { BiLinkExternal} from 'react-icons/bi';
 import { IProjects } from '../@types/IPortfolio';
 import { useSanityImage } from '../hooks/useSanityImage';
 
@@ -44,12 +45,12 @@ export function Projects({ projects }:ProjectsProps) {
 
       </motion.div>
 
-      <div className='w-full flex justify-center  mt-12'>
+      <div className='w-full flex justify-end  mt-12'>
         <a 
           href="https://github.com/jonasmartinsdev?tab=repositories"
           target={'_blank'} 
-          className='bg-white w-2/4 sm:w-1/4 h-7 flex justify-center items-center rounded-2xl' rel="noreferrer">
-          Ver mais projetos...
+          className='text-portfolio-primary font-bold  flex justify-center gap-2 items-center rounded-2xl' rel="noreferrer">
+          Ver mais... <BiLinkExternal/>
         </a>
       </div>
        
