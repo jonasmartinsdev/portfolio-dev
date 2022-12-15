@@ -15,7 +15,7 @@ export function About({ about }: AboutProps) {
   return (
     <section className='max-w-6xl w-full mx-auto min-h-screen pt-28 px-6' id='about'>
 
-      <Title title='Quem sou eu?' subTitle='Sobre min' />
+      <Title title='Quem sou eu?' subTitle='Sobre mim' />
 
       <span className='text-portfolio-primary text-xs font-bold'></span>
       <h1 className='text-white text-4xl sm:text-5xl font-bold'></h1>
